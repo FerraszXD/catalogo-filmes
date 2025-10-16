@@ -1,0 +1,119 @@
+/* ===============================
+   Catálogo de Filmes - Estilo Pornhub
+   Feito pra brilhar no escuro.
+   =============================== */
+
+body {
+    margin: 0;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* ======= Cabeçalho ======= */
+header {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-bottom: 3px solid #ff9900;
+}
+
+h1 {
+    color: #ff9900;
+    font-size: 2em;
+    margin: 0;
+}
+
+/* ======= Catálogo ======= */
+.catalogo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    gap: 20px;
+}
+
+/* ======= Card do Filme ======= */
+.filme {
+    background-color: #1b1b1b;
+    border: 2px solid #ff9900;
+    border-radius: 10px;
+    width: 220px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.filme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff9900;
+}
+
+.filme img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.filme h3 {
+    margin: 10px 0 5px;
+    color: #ffffff;
+}
+
+.filme h4 {
+    color: #bbbbbb;
+    margin: 5px 0 10px;
+}
+
+/* ======= Botões ======= */
+button {
+    background-color: #ff9900;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0f0f0f;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ffaa1d;
+    transform: scale(1.05);
+}
+
+/* Botão de voltar */
+.voltar {
+    margin: 20px;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #ff9900;
+    color: #ff9900;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    background-color: #ff9900;
+    color: #0f0f0f;
+}
+
+/* ======= Rodapé (opcional) ======= */
+footer {
+    background-color: #1b1b1b;
+    color: #777;
+    padding: 10px;
+    font-size: 0.9em;
+    border-top: 2px solid #ff9900;
+}
+
+/* ======= Responsividade ======= */
+@media (max-width: 600px) {
+    .catalogo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filme {
+        width: 80%;
+    }
+}
