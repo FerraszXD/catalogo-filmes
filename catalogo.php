@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,7 +25,7 @@
     <button onclick="window.location.href='catalogo_acao.php'">AÇÃO</button>
     <button onclick="window.location.href='catalogo_suspense.php'">SUSPENSE</button>
     <br><br>
-    <button onclick="window.location.href='index.php'">SAIR</button>
+    <button class="voltar" onclick="window.location.href='logout.php'">SAIR</button>
 
     <!--botoes para varias paginas-->
     
