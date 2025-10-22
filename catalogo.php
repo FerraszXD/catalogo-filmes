@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])) {
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 ?>
@@ -17,6 +17,8 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 <body>
 <h1 align="center">CATÁLOGO DE FILMES</h1>
+
+<hr>
 
 <div align="center">
    

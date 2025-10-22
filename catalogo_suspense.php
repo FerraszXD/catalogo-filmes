@@ -9,7 +9,9 @@
 <body>
 <h1 align="center">CATÁLOGO DE FILMES DE SUSPENSE</h1> 
 
-<!-- <h2>legal</h2> -->
+<hr>
+
+
 
 <div align="center">
    

@@ -4,25 +4,26 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Filmes de AÇÃO</title>
+    <title>Catálogo de Filmes de SUSPENSE</title>
 </head>
 <body>
-<h1 align="center">CATÁLOGO DE FILMES DE AÇÃO</h1>
+<h1 align="center">CATÁLOGO DE FILMES DE SUSPENSE</h1> 
 
 <hr>
 
+
+
 <div align="center">
    
-    <button onclick="window.location.href='catalogo_terror.php'">TERROR</button>
-    <button onclick="window.location.href='catalogo_comedia.php'">COMÉDIA</button>
-    <button onclick="window.location.href='catalogo_suspense.php'">SUSPENSE</button>
+    <button onclick="window.location.href='catalogo_terrorADM.php'">TERROR</button>
+    <button onclick="window.location.href='catalogo_comediaADM.php'">COMÉDIA</button>
+    <button onclick="window.location.href='catalogo_acaoADM.php'">AÇÃO</button>
     <br><br>
-    <button onclick="window.location.href='catalogo.php'">VOLTAR</button>
+    <button onclick="window.location.href='catalogoADM.php'">VOLTAR</button>
 
     <!--botoes para varias paginas-->
     
 </div>
-
 
 
 <hr>
@@ -32,7 +33,7 @@ require_once 'conexao.php';
 $conn = conexao();
 
 // Puxa todos os filmes 
-$sql = "SELECT * FROM filmes WHERE TEMA_filme = 'ação'";
+$sql = "SELECT * FROM filmes WHERE TEMA_filme = 'suspense'";
 //quais colunas eu quero puxar 
 
 // Executa a query no banco
@@ -72,7 +73,7 @@ if ($result->num_rows > 0) {
             echo "<td>" . $row['TEMA_filme'] . "</td>";
 
             // Coluna do borao
-            echo "<td><button onclick=\"window.location.href='filme.php'\"> ASSISTIR </button></td>";
+           echo "<td><button onclick=\"window.location.href='filme.php'\"> ASSISTIR </button></td>";
         echo "</tr>";
     }
 

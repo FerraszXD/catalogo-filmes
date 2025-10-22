@@ -17,5 +17,6 @@ if ($conn->connect_error) {
 }
 
 return $conn;
+
 }
 ?>

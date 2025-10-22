@@ -13,11 +13,11 @@
 
 <div align="center">
    
-    <button onclick="window.location.href='catalogo_terror.php'">TERROR</button>
-    <button onclick="window.location.href='catalogo_comedia.php'">COMÉDIA</button>
-    <button onclick="window.location.href='catalogo_suspense.php'">SUSPENSE</button>
+    <button onclick="window.location.href='catalogo_terrorADM.php'">TERROR</button>
+    <button onclick="window.location.href='catalogo_comediaADM.php'">COMÉDIA</button>
+    <button onclick="window.location.href='catalogo_suspenseADM.php'">SUSPENSE</button>
     <br><br>
-    <button onclick="window.location.href='catalogo.php'">VOLTAR</button>
+    <button onclick="window.location.href='catalogoADM.php'">VOLTAR</button>
 
     <!--botoes para varias paginas-->
     

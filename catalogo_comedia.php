@@ -9,6 +9,8 @@
 <body>
 <h1 align="center">CATÁLOGO DE FILMES DE COMEDIA</h1>
 
+<hr>
+
 <div align="center">
    
     <button onclick="window.location.href='catalogo_terror.php'">TERROR</button>

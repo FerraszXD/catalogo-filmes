@@ -1,38 +1,48 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'admin') {
+    header('Location: index.php');
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Filmes de AÇÃO</title>
+    <title>Catálogo de Filmes</title>
 </head>
 <body>
-<h1 align="center">CATÁLOGO DE FILMES DE AÇÃO</h1>
+<h1 align="center">CATÁLOGO DE FILMES</h1>
 
 <hr>
 
 <div align="center">
    
-    <button onclick="window.location.href='catalogo_terror.php'">TERROR</button>
-    <button onclick="window.location.href='catalogo_comedia.php'">COMÉDIA</button>
-    <button onclick="window.location.href='catalogo_suspense.php'">SUSPENSE</button>
+    <button onclick="window.location.href='catalogo_terrorADM.php'">TERROR</button>
+    <button onclick="window.location.href='catalogo_comediaADM.php'">COMÉDIA</button>
+    <button onclick="window.location.href='catalogo_acaoADM.php'">AÇÃO</button>
+    <button onclick="window.location.href='catalogo_suspenseADM.php'">SUSPENSE</button>
     <br><br>
-    <button onclick="window.location.href='catalogo.php'">VOLTAR</button>
+    <button class="voltar" onclick="window.location.href='gerencia.php'">Voltar</button>
 
     <!--botoes para varias paginas-->
     
 </div>
 
-
-
 <hr>
 <!-- linha que separa o cabeçalho -->
 <?php 
+
+// Conexão com o banco de dados
 require_once 'conexao.php';
 $conn = conexao();
 
 // Puxa todos os filmes 
-$sql = "SELECT * FROM filmes WHERE TEMA_filme = 'ação'";
+$sql = "SELECT * FROM filmes";
 //quais colunas eu quero puxar 
 
 // Executa a query no banco
@@ -87,6 +97,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-</head>
+
+
 </body>
 </html>
