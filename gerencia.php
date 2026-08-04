@@ -30,7 +30,7 @@ $result = $stmt->get_result();
 <div style="overflow:auto; padding: 0 20px 40px;">
 <table style="width:95%; margin: 0 auto; border-collapse: collapse;">
     <thead>
-        <tr style="background:#ff9900; color:#0f0f0f;">
+        <tr style="background: lch(30.28% 106.45 309.66); color:#0f0f0f;">
             <th>ID</th>
             <th>Título</th>
             <th>Duração (min)</th>
